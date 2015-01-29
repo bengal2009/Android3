@@ -7,5 +7,7 @@
     <string name="title_activity_screen_cap">ScreenCap</string>
     <string name="title_activity_getres">Getres</string>
     <string name="title_activity_text_shadow">TextShadowActivity</string>
+    <string name="title_activity_custlist">Custlist</string>
+    <string name="title_activity_main_list">MainList</string>
 
 </resources>

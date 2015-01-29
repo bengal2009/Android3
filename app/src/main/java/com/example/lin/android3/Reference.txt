@@ -1,7 +1,8 @@
 http://blog.csdn.net/agods/article/details/7434671
 http://blog.csdn.net/agods/article/details/7434585
 http://biandroid.iteye.com/blog/1890515
-http://loopj.com/android-async-http/  ÊI??²z
-https://github.com/square/retrofit   ÊI??²z
-https://github.com/square/okhttp  ÊI??²z
-https://github.com/square/picasso  ?¤ù¥[?
+http://loopj.com/android-async-http/  ï¿½I??ï¿½z
+https://github.com/square/retrofit   ï¿½I??ï¿½z
+https://github.com/square/okhttp  ï¿½I??ï¿½z
+https://github.com/square/picasso  ?ï¿½ï¿½
+http://biandroid.iteye.com/blog/1874648
