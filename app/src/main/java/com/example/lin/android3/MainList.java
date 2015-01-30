@@ -1,17 +1,16 @@
 package com.example.lin.android3;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
 
 
 public class MainList extends ActionBarActivity {
@@ -20,8 +19,28 @@ public class MainList extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_list);
-    }
+//        Start
+        ArrayList<NewsItem> image_details = getListData();
+        final ListView lv1 = (ListView) findViewById(R.id.listView12);
+        lv1.setAdapter(new CustomListAdapter(this, image_details));
+        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
+            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                Object o = lv1.getItemAtPosition(position);
+                NewsItem newsData = (NewsItem) o;
+                Toast.makeText(MainList.this, "Selected :" + " " + newsData, Toast.LENGTH_LONG).show();
+            }
+
+        });
+    }
+    private ArrayList<NewsItem> getListData() {
+        ArrayList<NewsItem> results = new ArrayList<NewsItem>();
+        NewsItem newsData = new NewsItem();
+        newsData.setTitle("Dance of Democracy");
+        newsData.setAddress("Pankaj Gupta");
+        results.add(newsData);
+        return results;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -44,68 +63,7 @@ public class MainList extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-}
- class NewsItem {
-    private String Title;
-    private String Address;
-    public String getTitle(){
-        return Title;
-    }
-    public String getAddress(){
-        return Address;
-    }
 
-    public void setTitle(String title  )
-    {
-        this.Title=title;
-    }
-    public void setAddress(String address)
-    {
-        this.Address=address;
-    }
-    @Override
-    public String toString(){
-        return Title+":"+Address;
-    }
-}
-class CustomListAdapter extends BaseAdapter {
-private ArrayList<NewsItem> listData;
-private LayoutInflater layoutInflater;
-    public CustomListAdapter(Context context, ArrayList<NewsItem> listData) {
-        this.listData = listData;
-        layoutInflater = LayoutInflater.from(context);
 
-    }
-    @Override
-    public int getCount() {
-        return listData.size();
-    }
-    @Override
-    public Object getItem(int position) {
-        return listData.get(position);
-    }
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-        if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.list_row_layout, null);
-            holder = new ViewHolder();
-            holder.headlineView = (TextView) convertView.findViewById(R.id.title);
-            holder.reporterNameView = (TextView) convertView.findViewById(R.id.reporter);
-            holder.reportedDateView = (TextView) convertView.findViewById(R.id.date);
-            convertView.setTag(holder);
-        } else {
-            holder = (ViewHolder) convertView.getTag();
-        }
-
-        holder.headlineView.setText(listData.get(position).getHeadline());
-        holder.reporterNameView.setText("By, " + listData.get(position).getReporterName());
-        holder.reportedDateView.setText(listData.get(position).getDate());
-
-        return convertView;
-    }
 }

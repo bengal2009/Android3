@@ -24,10 +24,6 @@
             android:label="@string/title_activity_text_shadow" >
         </activity>
         <activity
-            android:name=".Custlist"
-            android:label="@string/title_activity_custlist" >
-        </activity>
-        <activity
             android:name=".MainList"
             android:label="@string/title_activity_main_list" >
         </activity>
