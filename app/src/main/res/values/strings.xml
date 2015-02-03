@@ -10,5 +10,6 @@
     <string name="title_activity_custlist">Custlist</string>
     <string name="title_activity_main_list">MainList</string>
     <string name="title_activity_drage_view">DrageView</string>
+    <string name="title_activity_progressnotification">progressnotification</string>
 
 </resources>

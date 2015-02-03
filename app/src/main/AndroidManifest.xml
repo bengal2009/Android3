@@ -35,6 +35,10 @@
             android:name=".DrageView"
             android:label="@string/title_activity_drage_view" >
         </activity>
+        <activity
+            android:name=".progressnotification"
+            android:label="@string/title_activity_progressnotification" >
+        </activity>
     </application>
 
 </manifest>
