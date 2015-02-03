@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/imv1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:src="@drawable/ic_launcher" />
@@ -21,7 +21,7 @@
         android:text="title"
         android:id="@+id/Title1"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imv1"
         android:textStyle="bold"
         android:typeface="sans"
         android:textSize="20dp" />
@@ -32,8 +32,9 @@
         android:text="Address"
         android:id="@+id/addr"
         android:textSize="15sp"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_alignBottom="@+id/imv1"
+        android:layout_toEndOf="@+id/imv1"
+         />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -41,5 +42,6 @@
         android:id="@+id/chkb1"
         android:checked="false"
         android:layout_below="@+id/Title1"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        />
 </RelativeLayout>
