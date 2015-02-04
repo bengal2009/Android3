@@ -11,6 +11,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <receiver android:name="NotifySample$switchButtonListener" />
         <activity
             android:name=".ScreenCap"
             android:label="@string/title_activity_screen_cap" >
@@ -38,6 +39,10 @@
         <activity
             android:name=".progressnotification"
             android:label="@string/title_activity_progressnotification" >
+        </activity>
+        <activity
+            android:name=".NotifySample"
+            android:label="@string/title_activity_notify_sample" >
         </activity>
     </application>
 

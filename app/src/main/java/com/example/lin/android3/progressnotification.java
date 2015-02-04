@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-
 public class progressnotification extends ActionBarActivity {
     private NotificationManager mNotifyManager;
     private Builder mBuilder;
@@ -34,7 +33,6 @@ public class progressnotification extends ActionBarActivity {
                 mBuilder.setContentTitle("Download")
                         .setContentText("Download in progress")
                         .setSmallIcon(R.drawable.ic_launcher);
-
                 new Downloader().execute();
 
             }
