@@ -6,3 +6,4 @@ https://github.com/square/retrofit   �I??�z
 https://github.com/square/okhttp  �I??�z
 https://github.com/square/picasso  ?��
 http://biandroid.iteye.com/blog/1874648
+http://www.androidbegin.com/tutorial/android-custom-notification-tutorial/
