@@ -28,6 +28,7 @@ public class NotificationView extends Activity {
         // Retrive the data from MainActivity.java
         Intent i = getIntent();
 
+
         title = i.getStringExtra("title");
         text = i.getStringExtra("text");
 
@@ -38,5 +39,6 @@ public class NotificationView extends Activity {
         // Set the data into TextView
         txttitle.setText(title);
         txttext.setText(text);
+
     }
 }

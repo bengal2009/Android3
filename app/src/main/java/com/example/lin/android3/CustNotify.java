@@ -42,7 +42,6 @@ public class CustNotify extends ActionBarActivity {
         });
 
     }
-
     public void Notification() {
         // Set Notification Title
         String strtitle = getString(R.string.notificationtitle);
@@ -61,7 +60,7 @@ public class CustNotify extends ActionBarActivity {
         //Create Notification using NotificationCompat.Builder
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 // Set Icon
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.logosmall)
                         // Set Ticker Message
                 .setTicker(getString(R.string.notificationticker))
                         // Set Title
@@ -103,9 +102,9 @@ public class CustNotify extends ActionBarActivity {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 // Set Icon
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.logosmall)
                         // Set Ticker Message
-                .setTicker("1111")
+                .setTicker(getString(R.string.customnotificationticker))
                         // Dismiss Notification
                 .setAutoCancel(true)
                         // Set PendingIntent into Notification
@@ -115,11 +114,11 @@ public class CustNotify extends ActionBarActivity {
 
         // Locate and set the Image into customnotificationtext.xml ImageViews
         remoteViews.setImageViewResource(R.id.imagenotileft,R.drawable.ic_launcher);
-        remoteViews.setImageViewResource(R.id.imagenotiright,R.drawable.ic_launcher);
+        remoteViews.setImageViewResource(R.id.imagenotiright,R.drawable.androidhappy);
 
         // Locate and set the Text into customnotificationtext.xml TextViews
-        remoteViews.setTextViewText(R.id.title,"22222");
-        remoteViews.setTextViewText(R.id.text,"1111");
+        remoteViews.setTextViewText(R.id.title,getString(R.string.customnotificationtitle));
+        remoteViews.setTextViewText(R.id.text,getString(R.string.customnotificationtext));
 
         // Create Notification Manager
         NotificationManager notificationmanager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -127,6 +126,7 @@ public class CustNotify extends ActionBarActivity {
         notificationmanager.notify(0, builder.build());
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
